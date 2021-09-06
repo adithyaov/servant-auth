@@ -252,12 +252,12 @@ reading the cookie. For jQuery, and with the default values, that might be:
 var token = (function() {
   r = document.cookie.match(new RegExp('XSRF-TOKEN=([^;]+)'))
   if (r) return r[1];
-)();
+})();
 
 
 $.ajaxPrefilter(function(opts, origOpts, xhr) {
   xhr.setRequestHeader('X-XSRF-TOKEN', token);
-  }
+})
 
 ~~~
 

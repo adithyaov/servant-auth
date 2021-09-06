@@ -257,7 +257,7 @@ var token = (function() {
 
 $.ajaxPrefilter(function(opts, origOpts, xhr) {
   xhr.setRequestHeader('X-XSRF-TOKEN', token);
-})
+});
 
 ~~~
 
